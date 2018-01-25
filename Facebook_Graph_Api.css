@@ -1,0 +1,23 @@
+.Generate-token{
+	padding: 5%;
+	text-align:Center;
+}
+
+.access-token{
+	padding: 5%;
+	text-align: Center;
+}
+
+.display-data{
+	padding-top: 5%;
+	padding-bottom:2%;
+}
+
+.jumbotron{
+	background-color: orange;
+}
+
+.feed{
+	text-align: Center;
+	padding-bottom:2%;
+}

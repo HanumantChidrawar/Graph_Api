@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+  <link rel="stylesheet" href="Facebook_Graph_Api.css">
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> <!-- Jquery CDN-->
+  <script src="app.js"></script>  <!--Jquery function to fetch facebook basic data. -->
+  <script src="parallax.js-1.5.0/parallax.min.js"></script>  <!--parallax.js -->
+<!--  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>-->
+
+  </head>
+
+  <body>
+
+  <!---Heading -->
+    <section class="container-fluid">
+      <div class="jumbotron">
+        <h1>Facebook Graph API</h1>
+        <p>Little Demonstration of using graph API.</p>
+      </div>
+    </section>
+
+  <!-- Token Generation Section -->
+  <section class="container-fluid parallax-window" data-parallax="scroll" data-image-src="Nature1.jpg">
+
+      <div class="Generate-token"  >
+
+        <h2>First Generate an Access Token</h2>
+        <a href="https://developers.facebook.com/tools-and-support/" class="btn btn-primary" data-toggle="tooltip" title="Generate access token for email, hometown, education, work, cover picture & posts." target="_blank"><i class="fa fa-facebook fa-2x fa-pull-left"> Get Token</i></a>     <!--Button to get the Access token -->
+
+     </div>
+
+     <form class="form-inline access-token"> <!--In-line form to pass the Access token to function -->
+        <div class="form-group">
+          <label for="token">Access Token:</label>
+          <input type="text" class="form-control" id="token" placeholder="Paste Access Token">
+        </div>
+          <button type="button" class="btn btn-primary" id="go">Show Basic Data</button> <!-- Clicking this button triggers the function -->
+     </form>
+
+  </section>
+
+    <!-- Display Data -->
+  <section class="container-fluid parallax-window " data-parallax="scroll" data-image-src="Nature2.jpg"> <!-- -This section uses parallax.js effect-->
+
+    <section class="container display-data " >
+
+        <!-- Row1 -->
+      <div class="panel-group row" id="row1">
+        <div class="panel panel-default col-md-offset-1 col-md-5" id="panel1">
+          <div class="panel-heading" id="panel1-heading">Name & ID</div>
+          <div class="panel-body" id="name"></div>
+        </div>
+        <div class="panel panel-default col-md-offset-1 col-md-5" id="panel2">
+          <div class="panel-heading" id="panel2-heading">Home Town & Email</div>
+          <div class="panel-body" id="home-town"></div>
+        </div>
+      </div>
+
+        <!-- Row2 -->
+	    <div class="panel-group row" id="row2">
+        <div class="panel panel-default col-md-offset-1 col-md-5" id="panel3">
+          <div class="panel-heading" id="panel3-heading">Education</div>
+          <div class="panel-body" id="education"></div>
+        </div>
+        <div class="panel panel-default col-md-offset-1 col-md-5" id="panel4">
+          <div class="panel-heading" id="panel4-heading">Work</div>
+          <div class="panel-body" id="work"></div>
+        </div>
+      </div>
+
+        <!-- Row3 -->
+	    <div class="panel-group row" id="row3">
+	      <div class="panel panel-default col-md-offset-1 col-md-11" id="panel5">
+	      <div class="panel-heading" id="panel5-heading"> Cover </div>
+	      <div class="panel-body" id="cover"></div>
+	    </div>
+
+    </section>
+
+    <div class="feed">
+	    <button class="btn btn-primary" id="myFeed">Click to see My Feed</button>
+	  </div>
+ </section>
+
+ <section class="container-fluid feedSection ">
+
+	 <section class="container display-data">
+
+	<!-- Row1 -->
+     <div class="panel-group row" id="feedrow1">
+       <div class="panel panel-default col-md-offset-1 col-md-5" id="feedPanel1">
+          <div class="panel-heading" id="feedPanel1-heading">Post 1</div>
+          <div class="panel-body" id="post1"></div>
+        </div>
+        <div class="panel panel-default col-md-offset-1 col-md-5" id="feedPanel2">
+          <div class="panel-heading" id="feedPanel2-heading">Post 2</div>
+          <div class="panel-body" id="post2"></div>
+        </div>
+     </div>
+
+        <!-- Row2 -->
+  	<div class="panel-group row" id="feedrow2">
+        <div class="panel panel-default col-md-offset-1 col-md-5" id="feedPanel3">
+          <div class="panel-heading" id="feedPanel3-heading">Post 3</div>
+          <div class="panel-body" id="post3"></div>
+        </div>
+        <div class="panel panel-default col-md-offset-1 col-md-5" id="feedPanel4">
+          <div class="panel-heading" id="feedPanel4-heading">Post 4</div>
+          <div class="panel-body" id="post4"></div>
+        </div>
+     </div>
+
+        <!-- Row3 -->
+	   <div class="panel-group row" id="feedrow3">
+	     <div class="panel panel-default col-md-offset-1 col-md-11" id="feedPanel5">
+	       <div class="panel-heading" id="feedPanel5-heading">Post 5 </div>
+	       <div class="panel-body" id="post5"></div>
+	    </div>
+    </div>
+	</section>
+
+</section>
+
+   <!-- FontAwesome Library-->
+   <script src="https://use.fontawesome.com/c6253b14f7.js"></script>
+  </body>
+</html>
